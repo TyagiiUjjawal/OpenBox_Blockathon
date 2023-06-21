@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import {
   clearErrors,
@@ -160,7 +161,10 @@ const ProductDetails = ({ match }) => {
                   >
                     Add to Cart
                   </button>
-                  <button onClick={redirecturl}>Donate</button>
+
+                  <Link to="/cart">
+                    <button>Move to Cart</button>
+                  </Link>
                 </div>
 
                 <p>
